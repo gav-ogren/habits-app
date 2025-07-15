@@ -8,32 +8,34 @@
 import SwiftUI
 
 struct ContentView: View {
-    enum Field {
-        case username
-        case password
-    }
-
-    @FocusState private var focusedField: Field?
-    @State private var username = ""
-    @State private var password = ""
-
     var body: some View {
-        Form {
-            TextField("Username", text: $username)
-                .focused($focusedField, equals: .username)
-                .submitLabel(.next)
-
-            SecureField("Password", text: $password)
-                .focused($focusedField, equals: .password)
-                .submitLabel(.done)
-        }
-        .onSubmit {
-            switch focusedField {
-            case .username:
-                focusedField = .password
-            default:
-                focusedField = nil
+        VStack{
+            HStack{
+                Spacer()
+                
+                Button(action: {print("User button tapped")})
+                {
+                    Image(systemName: "person.circle.fill").resizable().frame(width: 35, height: 35).foregroundColor(.blue)
+                    
+                }.buttonStyle(PlainButtonStyle())
+                Spacer()
+                Spacer()
+                Text("myTargets")
+                Spacer()
+                Spacer()
+                Button(action: {print("User button tapped")})
+                {
+                    Image(systemName: "line.3.horizontal.decrease.circle.fill").resizable()
+                        .frame(width: 25, height: 25).foregroundColor(.orange)
+                }
+                Spacer()
             }
+            Spacer()
+            HStack{
+            }
+            Spacer()
+            HStack{}
+            Spacer()
         }
     }
 }
