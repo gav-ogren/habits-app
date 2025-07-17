@@ -29,9 +29,30 @@
 		364460C92E0DC7D2005E0AA3 /* habits-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "habits-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		36A37E882E28A396006BB753 /* Exceptions for "habits-app" folder in "habits-appTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				DraggableProgressBar.swift,
+			);
+			target = 364460BE2E0DC7D2005E0AA3 /* habits-appTests */;
+		};
+		36A37E892E28A396006BB753 /* Exceptions for "habits-app" folder in "habits-appUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				DraggableProgressBar.swift,
+			);
+			target = 364460C82E0DC7D2005E0AA3 /* habits-appUITests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		364460B42E0DC7D0005E0AA3 /* habits-app */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				36A37E882E28A396006BB753 /* Exceptions for "habits-app" folder in "habits-appTests" target */,
+				36A37E892E28A396006BB753 /* Exceptions for "habits-app" folder in "habits-appUITests" target */,
+			);
 			path = "habits-app";
 			sourceTree = "<group>";
 		};
