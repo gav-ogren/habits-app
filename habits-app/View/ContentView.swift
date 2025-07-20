@@ -41,36 +41,47 @@ struct ContentView: View {
 
                 // Scrollable Main Content
                 ScrollView {
-                    VStack(alignment: .leading) {
-                        HStack{
+                    VStack(alignment: .leading, spacing: 16) {
+                        HStack {
                             Text("Goals")
                             Spacer()
-                            Text("See More") // Proabably edit in the future to make it a link
+                            Text("See More")
                         }
-                        // Drag-to-Adjust Bars
+
                         DraggableProgressBar(
                             title: "Walk",
                             icon: "figure.walk",
                             color: .blue,
                             maxValue: 10000
                         )
-                        
+
                         DraggableProgressBar(
                             title: "Daily Bible Reading",
                             icon: "book",
                             color: .pink,
                             maxValue: 10
                         )
+
+                        HStack {
+                            Text("Routines")
+                            Spacer()
+                            Text("See More")
+                        }
+
+                        RoutinesSection()
+
+                        // Add more components here without worrying about space!
                     }
-                    .padding()
-                    .frame(maxWidth: 600)
-                    .background(Color.white)
-                    .cornerRadius(20)
-                    .shadow(radius: 8)
-                    .padding(.horizontal, 24)
-                    .padding(.bottom, 120) // Leave space for nav bar
-                    .padding(.top, 20)
+                    
                 }
+                .padding()
+                .frame(maxWidth: 600, alignment: .top) // Keep wide limit, but let it grow tall
+                .background(Color.white)
+                .cornerRadius(20)
+                .shadow(radius: 8)
+                .padding(.horizontal, 24)
+                .padding(.bottom, 0)
+                .padding(.top, 20)
             }
 
             // Bottom Nav Bar and Floating +

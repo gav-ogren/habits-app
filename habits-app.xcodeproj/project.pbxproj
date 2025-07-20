@@ -33,14 +33,14 @@
 		36A37E882E28A396006BB753 /* Exceptions for "habits-app" folder in "habits-appTests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				DraggableProgressBar.swift,
+				View/DraggableProgressBar.swift,
 			);
 			target = 364460BE2E0DC7D2005E0AA3 /* habits-appTests */;
 		};
 		36A37E892E28A396006BB753 /* Exceptions for "habits-app" folder in "habits-appUITests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				DraggableProgressBar.swift,
+				View/DraggableProgressBar.swift,
 			);
 			target = 364460C82E0DC7D2005E0AA3 /* habits-appUITests */;
 		};

@@ -57,3 +57,6 @@ struct DraggableProgressBar: View {
         .cornerRadius(12)
     }
 }
+#Preview {
+    ContentView()
+}
