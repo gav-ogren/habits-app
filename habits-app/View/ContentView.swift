@@ -41,11 +41,14 @@ struct ContentView: View {
 
                 // Scrollable Main Content
                 ScrollView {
-                    VStack(alignment: .leading, spacing: 16) {
+                    VStack {
                         HStack {
                             Text("Goals")
+                            
                             Spacer()
                             Text("See More")
+                                .foregroundColor(.blue)
+                                .font(.subheadline)
                         }
 
                         DraggableProgressBar(
@@ -61,18 +64,59 @@ struct ContentView: View {
                             color: .pink,
                             maxValue: 10
                         )
-
+                    }
+                    VStack{
                         HStack {
                             Text("Routines")
+                                .font(.headline)
                             Spacer()
                             Text("See More")
+                                .foregroundColor(.blue)
+                                .font(.subheadline)
                         }
-
-                        RoutinesSection()
-
-                        // Add more components here without worrying about space!
+                        
+                        ZStack {
+                            
+                            VStack{
+                                
+                                HStack{
+                                    
+                                    Text("Yo Momma")
+                                    Spacer()
+                                    Text("Shower")
+                                    Spacer()
+                                    Text("Monthly")
+                                    Spacer()
+                                }
+                                HStack{
+                                    Spacer()
+                                    CircularProgressView(progress: 0.7, color: .yellow)
+                                    Spacer()
+                                    CircularProgressView(progress: 0.9, color: .pink)
+                                    Spacer()
+                                    CircularProgressView(progress: 0.4, color: .blue)
+                                    Spacer()
+                                }
+                                
+                            }
+                            
+                            
+                        }.padding( .vertical).background(Color.gray.opacity(0.2)).cornerRadius(12)
+                        
+                      
+                            
+                        }
+                    VStack{
+                        HStack{
+                            Text("To-Do")
+                                .font(.headline)
+                            Spacer()
+                            Text("See More")
+                                .foregroundColor(.blue)
+                                .font(.subheadline)
+                        }
+                        DashboardToDoView()
                     }
-                    
                 }
                 .padding()
                 .frame(maxWidth: 600, alignment: .top) // Keep wide limit, but let it grow tall
@@ -82,12 +126,14 @@ struct ContentView: View {
                 .padding(.horizontal, 24)
                 .padding(.bottom, 0)
                 .padding(.top, 20)
+        
+        
             }
+            
 
             // Bottom Nav Bar and Floating +
             VStack {
                 Spacer()
-
                 ZStack {
                     // Navigation Bar
                     HStack {
