@@ -5,7 +5,6 @@ struct ContentView: View {
         ZStack {
             //
             Color.gray.opacity(0.15).ignoresSafeArea()
-
             VStack(spacing: 0) {
                 // Top Bar
                 HStack {
